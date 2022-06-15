@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang = "ru">
+
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>МСИИ 4</title>
+        <link rel = "stylesheet" href = "./css/style.css">
+        <script src = "./js/app.js" defer></script>
+    </head>
+
+    <body>
+        <div class = "wrapper">
+
+            <form>
+                <div class="horizLayout">
+                    <label for="minX">X начальное</label>
+                    <input type="number" name="minX" value="0" id="minX" min="0" max="0">
+                </div>
+                <div class="horizLayout">
+                    <label for="maxX">X конечное</label>
+                    <input type="number" name="maxX" id="maxX" value="20" min="1" max="20">
+                </div>
+                <div class="horizLayout">
+                    <label for="accrBox">Точность</label>
+                    <input type="number" name="accrBox" id="accrBox" value="6" min="1" max="10">
+                </div>
+                <div class="horizLayout">
+                    <label for="popSize">Размер попуряции</label>
+                    <input type="number" name="popSize" id="popSize" value="20" min="10" max="200" step="10">
+                </div>
+                <div class="horizLayout">
+                    <label for="textBox1">Вероятность мутации</label>
+                    <input type="text" name="textBox1" id="textBox1" maxlength="5" value="0.1">
+                </div>
+                <div class="horizLayout">
+                    <label for="textBox2">Кол-во итераций</label>
+                    <input type="text" name="textBox2" id="textBox2" maxlength="5" value="10">
+                </div>
+                <label class="label1">Размер хромосомы: </label>
+                <input type="button" value="Инициализировать" class="button1">
+                <input type="button" value="Сделать шаг" class="button2" disabled>
+                <input type="button" value="Автоматический проход" class="button3" disabled>
+                <label class="label2">Итерация #</label>
+            </form>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Хромосома</th>
+                        <th>Аргумент</th>
+                        <th>Значение функции</th>
+                    </tr>
+                </thead>
+                <tbody class="dataGrid">
+                    
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+</html>

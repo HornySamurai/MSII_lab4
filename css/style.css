@@ -1,0 +1,101 @@
+@import url('../Roboto/RobotoLink.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(75, 92, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+}
+
+.wrapper{
+    min-width: 80vw;
+    min-height: 80vh;
+    border-radius: 10px;
+    background-color: rgb(120, 189, 206);
+    box-shadow: 3px 3px 10px rgb(135, 197, 201);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 7%;
+    padding: 5px;
+}
+
+.horizLayout{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    flex: 1;
+}
+
+label{
+    text-align: right;
+    width: 120px;
+    word-wrap: break-word;
+    height: auto;
+    font-size: 1.2em;
+}
+
+[type='number'], [type='text']{
+    font-size: 1.1em;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#textBox1, #textBox2{
+    width: 100px;
+    padding: 7px;
+}
+
+.label1, .label2{
+    width: auto;
+    align-self: center;
+    margin: 20px 0;
+}
+
+form > [type = 'button'] {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #fff;
+    margin: 10px 0;
+    transition: background-color 0.5s, transform 0.2s, box-shadow 0.2s;
+}
+
+form > input[type = 'button']:not(input[disabled]):hover{
+    box-shadow: 5px 5px 10px rgb(179, 145, 221);
+    transform: scale(1.15);
+    background-color: rgb(176, 230, 233);
+}
+
+.table{
+    align-self: flex-start;    
+    flex: 3;
+    user-select: none;
+    border-collapse: collapse;
+}
+
+.table th,td{
+    padding: 10px;
+}
+
+tbody td{
+    border: 1px ridge rgb(240, 109, 109);
+    text-align: center;
+}
