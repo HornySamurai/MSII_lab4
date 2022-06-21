@@ -59,7 +59,7 @@ const createPopulation = (size) => {
 
 const chooseParent = () => {
     let summ = 0;
-    for(let i = 1; i <= population.length; ++i) summ++;
+    for(let i = 1; i <= population.length; ++i) summ += i;
     let num = 0, ch = Math.random();
     for(let i = 0; i < population.length; i++){
         num += parseFloat((population.length - 1) / summ);
