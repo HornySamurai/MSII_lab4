@@ -84,10 +84,15 @@ const evolution = () => {
             obj2 = Array.from(population[parent2].code.slice(0, crossPoint) + population[parent1].code.slice(crossPoint))
 
             for(let j = 0; j < chromSize; j++){
-                if(Math.random() < mutationChance)
+                if(mutationChance < 1.0){
+                    if(Math.random() < mutationChance)
+                        obj1[j] = obj1[j] == '0' ? '1' : '0';
+                    if(Math.random() < mutationChance)
+                        obj2[j] = obj2[j] == '0' ? '1' : '0';
+                } else {
                     obj1[j] = obj1[j] == '0' ? '1' : '0';
-                if(Math.random() < mutationChance)
-                    obj1[j] = obj1[j] == '0' ? '1' : '0';
+                    obj2[j] = obj2[j] == '0' ? '1' : '0';
+                }
             }
             child1 = obj1.join('');
             child2 = obj2.join('');
