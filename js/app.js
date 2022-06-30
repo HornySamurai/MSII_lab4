@@ -57,6 +57,10 @@ const createPopulation = (size) => {
     }
 }
 
+const mutation = (ch) => {
+    return ch == '0' ? '1' : '0';
+}
+
 const chooseParent = () => {
     let summ = 0;
     for(let i = 1; i <= population.length; ++i) summ += i;
@@ -79,7 +83,6 @@ const evolution = () => {
             crossPoint = randint(1, chromSize - 1);
             parent1 = chooseParent();
             parent2 = chooseParent();
-            
             obj1 = Array.from(population[parent1].code.slice(0, crossPoint) + population[parent2].code.slice(crossPoint))
             obj2 = Array.from(population[parent2].code.slice(0, crossPoint) + population[parent1].code.slice(crossPoint))
 
